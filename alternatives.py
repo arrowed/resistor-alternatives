@@ -19,6 +19,8 @@ patterns = {'bk': 0,
 
 def convert_code(colour_code):
     '''
+    Convert a colour code into its representative values.
+    No logic is applied (ie using 3rd digit to multiply.
     >>> assert convert_code('oobkg') == [3, 3, 0, 5]
     '''
     digit = 0
@@ -36,3 +38,4 @@ def convert_code(colour_code):
 
 
     return ret
+
