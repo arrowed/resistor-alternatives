@@ -39,3 +39,17 @@ def convert_code(colour_code):
 
     return ret
 
+def convert(code):
+    '''Convert an array of values into a single number'''
+    if len(code) == 4 or len(code) == 3:
+        return convert_4(code)
+
+    raise Exception('Cant handle code with %d digits' % len(code))
+
+def convert_4(code):
+    '''Convert an array of 3 or 4 values into a single number
+    >>> assert convert([3, 3, 0, 5]) == 33
+    '''
+
+    return ((code[0] * 10) + code[1]) ** (code[2]+1)
+
